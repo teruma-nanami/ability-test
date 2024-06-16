@@ -1,0 +1,95 @@
+.contact-form {
+  &__heading {
+    text-align: center;
+    h2 {
+      font-family: 'inika';
+      font-weight: 400;
+      font-size: 35px;
+      color: #8b7969;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+.form__group {
+  display: flex;
+  max-width: 972px;
+  margin: 32px auto 0;
+  justify-content: space-between;
+  &-title {
+    width: 30%;
+  }
+  &--content {
+    width: 70%;
+  }
+}
+
+.form__label{
+  &--item {
+    font-family: 'inika';
+    font-size: 20px;
+    color: #8b7969;
+  }
+  &--required {
+    color: #f00;
+    font-size: 20px;
+  }
+}
+.form__input--text {
+    // width: 70%;
+    font-size: 14px;
+    display: flex;
+    input[type="text"] {
+      padding: 10px 34px;
+      color: #beb1a6;
+      background-color: #f4f4f4;
+      border: none;
+      width: 100%;
+    }
+    input[type="radio"] {
+      display: inline-block;
+      & + label {
+        margin: 0 25px 0 5px;
+        color: #8B7969;
+        font-size: 18px;
+        font-family: 'inika';
+      }
+    }
+    span {
+      display: inline-block;
+      margin: 0 20px;
+      align-self: center;
+    }
+    select {
+      padding: 10px 16px;
+      color: #beb1a6;
+      background-color: #f4f4f4;
+      border: none;
+    }
+}
+.form__input--textarea {
+  textarea {
+    width: 100%;
+    color: #beb1a6;
+    background-color: #f4f4f4;
+    border: none;
+    padding: 16px 34px;
+    font-size: 14px;
+    height: 125px;
+  }
+}
+
+.form__button {
+  text-align: center;
+  margin-top: 50px;
+  &-submit {
+    background-color: #82756A;
+    border: none;
+    color: #fff;
+    padding: 10px 40px;
+    font-family: 'inika';
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
