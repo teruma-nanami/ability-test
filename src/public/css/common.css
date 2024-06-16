@@ -1,14 +1,41 @@
 .header {
-  text-align: center;
+  border-bottom: 1px solid #E0DFDE;
+  font-family: "Inika";
 }
 .header__inner {
-  border-bottom: 1px solid #E0DFDE;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
   padding: 20px 0;
+}
+.header h1 {
+  font-weight: 400;
+  grid-column: 2;
+  justify-self: center;
 }
 .header__logo {
   font-size: 40px;
   color: #8b7969;
   text-decoration: none;
+}
+.header__link {
+  grid-column: 3;
+  align-self: center;
+}
+.header__link a {
+  padding: 5px 20px;
+  font-size: 20px;
+  border: 1px solid #d9c6b5;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  color: #d9c6b5;
+}
+.header__link button {
+  padding: 5px 20px;
+  font-size: 20px;
+  border: 1px solid #d9c6b5;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  color: #d9c6b5;
 }
 
 .footer {
