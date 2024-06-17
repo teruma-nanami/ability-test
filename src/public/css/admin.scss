@@ -54,12 +54,30 @@
     width: 100%;
     height: 100%;
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     input {
       display: block;
-      margin-right: 20px;
+      margin-right: 30px;
+    }
+    input[type="text"] {
+      width: 35%;
+      padding-left: 20px;
+      color: #8B7969;
+      border: 1px solid #E3DED9;
+      background-color: #fbfbfb;
+    }
+    input[type="date"] {
+      border: 1px solid #E3DED9;
+      color: #8B7969;
+      background-color: #f4f4f4;
     }
     select {
+      margin-right: 30px;
+      padding: 10px 10px 10px 20px;
+      border-radius: none;
+      border: 1px solid #E3DED9;
+      color: #8B7969;
+      background-color: #f4f4f4;
     }
     button {
       font-size: 18px;
@@ -67,6 +85,7 @@
       border: 1px solid #8b7969;
       background-color: #82756a;
       padding: 12px 30px;
+      margin-right: 30px;
     }
     a {
       font-size: 18px;
@@ -84,7 +103,14 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 30px 0;
+    margin: 30px 0 20px;
+    button {
+      background-color: #e1dbd6;
+      color: #8b7969;
+      border: none;
+      padding: 8px 20px;
+      cursor: pointer;
+    }
   }
 }
 
@@ -182,20 +208,32 @@ svg.w-5.h-5 {
   height: 18px;
 }
 .z-0 {
-  text-align: center;
-  border-radius: 3px;
+  border-radius: 5px;
   // border: 1px solid #e0DFDE;
+  padding: 8px 0;
+  overflow: hidden;
   & > a {
     padding: 8px 12px;
     color: #8b7969;
     text-decoration: none;
+    font-size: 18px;
+    font-family: 'Inika';
     border: 1px solid #e0DFDE;
   }
-  & > span {
+  & > span .px-2 {
+    padding: 7px 2px 5px 12px;
+    color: #8b7969;
+    text-decoration: none;
+    font-size: 18px;
+    border: 1px solid #e0DFDE;
+  }
+  & > span .px-4 {
     padding: 8px 12px;
     color: #fff;
     background-color: #8b7969;
     text-decoration: none;
+    font-size: 18px;
+    font-family: 'Inika';
     border: 1px solid #e0DFDE;
   }
 }

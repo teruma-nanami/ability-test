@@ -77,9 +77,15 @@
           <input type="text" name="subscNumber" placeholder="5678"  value="{{ old('subscNumber') }}" />
         </div>
         <div class="form__error">
-          @error('areaNumber')
-              {{ $message }}
-          @enderror
+          @if ($errors->has('areaNumber') || $errors->has('localNumber') || $errors->has('subscNumber'))
+              @if ($errors->first('areaNumber') == '電話番号を5桁以内で入力してください' ||
+                   $errors->first('localNumber') == '電話番号を5桁以内で入力してください' ||
+                   $errors->first('subscNumber') == '電話番号を5桁以内で入力してください')
+                  電話番号を5桁以内で入力してください。
+              @else
+                  電話番号を正しく入力してください。
+              @endif
+          @endif
         </div>
       </div>
     </div>

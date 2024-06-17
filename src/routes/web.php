@@ -18,7 +18,7 @@ use App\Http\Controllers\AuthController;
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::post('/contacts', [ContactController::class, 'store']);
-Route::post('/delete', [ContactController::class, 'delete']);
+Route::delete('/delete', [ContactController::class, 'destroy']);
 
 
 Route::get('/admin', [AuthController::class, 'index']);

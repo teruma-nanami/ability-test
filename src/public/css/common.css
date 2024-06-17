@@ -43,6 +43,22 @@
   color: #dc143c;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type=date] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
 .footer {
   margin-bottom: 33px;
 }/*# sourceMappingURL=common.css.map */

@@ -73,7 +73,6 @@
           <th> </th>
         </tr>
         @foreach ($contacts as $index => $contact)
-        
         <tr>
           <td>{{$contact['first_name']}} {{$contact['last_name']}}</td>
           <td>{{$contact['genderText']}}</td>
@@ -153,7 +152,8 @@
               <form action="/delete" method="POST">
               @method('DELETE')
               @csrf
-              <button class="modal__button">削除</button>
+              <input type="hidden" name="id" value="{{ $contact['id'] }}">
+              <button class="modal__button" type="submit">削除</button>
               </form>
             </div>
           
