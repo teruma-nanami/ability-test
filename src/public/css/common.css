@@ -38,6 +38,11 @@
   color: #d9c6b5;
 }
 
+.form__error {
+  margin-top: 10px;
+  color: #dc143c;
+}
+
 .footer {
   margin-bottom: 33px;
 }/*# sourceMappingURL=common.css.map */

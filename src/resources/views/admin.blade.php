@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
   @yield('css')
   <title>FashionablyLate</title>
-  <script src="{{ asset('js/modal.js')}}"></script>
+  
 </head>
 <body>
   <header class="header">
@@ -72,16 +72,93 @@
           <th>お問い合わせの種類</th>
           <th> </th>
         </tr>
-        @foreach ($contacts as $contact)
+        @foreach ($contacts as $index => $contact)
         
         <tr>
           <td>{{$contact['first_name']}} {{$contact['last_name']}}</td>
           <td>{{$contact['genderText']}}</td>
           <td>{{$contact['email']}}</td>
           <td>{{$contact['categoryText']}}</td>
-          <td><button>詳細</button></td>
+          <td><button class="open-modal" data-modal-id="modal-window-{{ $index }}">詳細</button></td>
         </tr>
-        
+        <div class="modal" id="modal-window-{{ $index }}" style="display:none;">
+          <span class="modal__close">×</span>
+          <div class="modal__inner">
+            <div class="modal__content">
+              <div class="modal__title">
+                お名前
+              </div>
+              <div class="modal__text">
+                {{$contact['first_name']}} {{$contact['last_name']}}
+              </div>
+            </div>
+            <div class="modal__content">
+              <div class="modal__title">
+                性別
+              </div>
+              <div class="modal__text">
+                {{$contact['genderText']}}
+              </div>
+            </div>
+            <div class="modal__content">
+              <div class="modal__title">
+                メールアドレス
+              </div>
+              <div class="modal__text">
+                {{$contact['email']}}
+              </div>
+            </div>
+            <div class="modal__content">
+              <div class="modal__title">
+                電話番号
+              </div>
+              <div class="modal__text">
+                {{$contact['tel']}}
+              </div>
+            </div>
+            <div class="modal__content">
+              <div class="modal__title">
+                住所
+              </div>
+              <div class="modal__text">
+                {{$contact['address']}}
+              </div>
+            </div>
+            <div class="modal__content">
+              <div class="modal__title">
+                建物名
+              </div>
+              <div class="modal__text">
+                {{$contact['building']}}
+              </div>
+            </div>
+            <div class="modal__content">
+              <div class="modal__title">
+                お問い合わせの種類
+              </div>
+              <div class="modal__text">
+                {{$contact['categoryText']}}
+              </div>
+            </div>
+            <div class="modal__content">
+              <div class="modal__title">
+                お問い合わせ内容
+              </div>
+              <div class="modal__text">
+                {{$contact['detail']}}
+              </div>
+            </div>
+          </div>
+            <div class="modal__form">
+              <form action="/delete" method="POST">
+              @method('DELETE')
+              @csrf
+              <button class="modal__button">削除</button>
+              </form>
+            </div>
+          
+        </div>
+        </div>
         @endforeach
 
       </tbody>
@@ -89,5 +166,6 @@
   </div>
 </main>
 <footer class="footer"></footer>
+<script src="{{ asset('js/modal.js')}}"></script>
 </body>
 </html>
