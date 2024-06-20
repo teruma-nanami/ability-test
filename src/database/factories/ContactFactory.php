@@ -20,7 +20,7 @@ class ContactFactory extends Factory
             'gender' => $this->faker->numberBetween(1,3),
             'email' => $this->faker->safeEmail,
             'tel' => $this->faker->phoneNumber,
-            'address' => $this->faker->address,
+            'address' => "{$this->faker->prefecture} {$this->faker->city} {$this->faker->streetName} {$this->faker->buildingNumber}",
             'building' => $this->faker->secondaryAddress,
             'category_id' => $this->faker->numberBetween(1,5),
             'detail' => $this->faker->sentence,

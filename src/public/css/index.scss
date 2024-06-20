@@ -20,24 +20,25 @@
   &-title {
     width: 30%;
   }
-  &--content {
+  &-content {
     width: 70%;
   }
 }
 
 .form__label{
-  &--item {
+  &-item {
     font-family: 'inika';
     font-size: 20px;
     color: #8b7969;
   }
-  &--required {
+  &-required {
     color: #f00;
     font-size: 20px;
   }
 }
-.form__input--text {
-    // width: 70%;
+
+
+.form__input-text {
     font-size: 14px;
     display: flex;
     input[type="text"] {
@@ -47,28 +48,78 @@
       border: none;
       width: 100%;
     }
-    input[type="radio"] {
-      display: inline-block;
-      & + label {
-        margin: 0 25px 0 5px;
-        color: #8B7969;
-        font-size: 18px;
-        font-family: 'inika';
-      }
-    }
     span {
       display: inline-block;
       margin: 0 20px;
       align-self: center;
     }
     select {
+      width: 50%;
       padding: 10px 16px;
       color: #beb1a6;
       background-color: #f4f4f4;
       border: none;
+      -webkit-appearance: none;
+      appearance: none; /* デフォルトの矢印を無効 */
+      background-image: url("/img/icon.png");
+      background-position: right 10px center;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
     }
 }
-.form__input--textarea {
+input[type="radio"] {
+  // position: absolute;
+  // white-space: nowrap;
+  // width: 1px;
+  // height: 1px;
+  // overflow: hidden;
+  // border: 0;
+  // padding: 0;
+  // clip: rect(0 0 0 0);
+  // clip-path: inset(50%);
+  // margin: -1px;
+}
+label {
+  margin: 0 55px 0 5px;
+  color: #8B7969;
+  font-size: 18px;
+  font-family: 'inika';
+  cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+}
+// label::before {
+//   content: "";
+//   display: block;
+//   border-radius: 50%;
+//   position: absolute;
+//   transform: translateY(-50%);
+//   top: 50%;
+//   height: 20px;
+//   width: 20px;
+//   left: 0;
+//   background-color: #fff;
+//   border: 1px solid #82756A;
+// }
+
+// label::after {
+//   content: "";
+//   display: block;
+//   border-radius: 50%;
+//   position: absolute;
+//   transform: translateY(-50%);
+//   top: 50%;
+//   height: 20px;
+//   width: 20px;
+//   left: 0;
+//   background-color: #82756A;
+//   opacity: 0;
+// }
+// input[type="radio"]:checked + label::after {
+//   opacity: 1;
+// }
+
+.form__input-textarea {
   textarea {
     width: 100%;
     color: #beb1a6;

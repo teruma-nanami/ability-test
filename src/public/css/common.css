@@ -36,17 +36,16 @@
   background-color: #f0f0f0;
   text-decoration: none;
   color: #d9c6b5;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.75;
 }
 
 .form__error {
   margin-top: 10px;
   color: #dc143c;
-}
-
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
 }
 
 textarea {

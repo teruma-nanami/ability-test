@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .contact-form__heading {
   text-align: center;
 }
@@ -18,53 +19,62 @@
 .form__group-title {
   width: 30%;
 }
-.form__group--content {
+.form__group-content {
   width: 70%;
 }
 
-.form__label--item {
+.form__label-item {
   font-family: "inika";
   font-size: 20px;
   color: #8b7969;
 }
-.form__label--required {
+.form__label-required {
   color: #f00;
   font-size: 20px;
 }
 
-.form__input--text {
+.form__input-text {
   font-size: 14px;
   display: flex;
 }
-.form__input--text input[type=text] {
+.form__input-text input[type=text] {
   padding: 10px 34px;
   color: #beb1a6;
   background-color: #f4f4f4;
   border: none;
   width: 100%;
 }
-.form__input--text input[type=radio] {
-  display: inline-block;
-}
-.form__input--text input[type=radio] + label {
-  margin: 0 25px 0 5px;
-  color: #8B7969;
-  font-size: 18px;
-  font-family: "inika";
-}
-.form__input--text span {
+.form__input-text span {
   display: inline-block;
   margin: 0 20px;
   align-self: center;
 }
-.form__input--text select {
+.form__input-text select {
+  width: 50%;
   padding: 10px 16px;
   color: #beb1a6;
   background-color: #f4f4f4;
   border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none; /* デフォルトの矢印を無効 */
+  background-image: url("/img/icon.png");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
 }
 
-.form__input--textarea textarea {
+label {
+  margin: 0 55px 0 5px;
+  color: #8B7969;
+  font-size: 18px;
+  font-family: "inika";
+  cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+}
+
+.form__input-textarea textarea {
   width: 100%;
   color: #beb1a6;
   background-color: #f4f4f4;
