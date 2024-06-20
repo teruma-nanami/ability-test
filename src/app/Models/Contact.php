@@ -51,9 +51,8 @@ class Contact extends Model
         if (!empty($keyword)) {
             $query->where(function($query) use ($keyword) {
                 $query->where('first_name', 'like', '%' . $keyword . '%')
-                      ->orWhere('email', 'like', '%' . $keyword . '%')
-                      ->orWhere('last_name', 'like', '%' . $keyword . '%');
-                // 他に検索したいカラムがあれば、同様にorWhereを追加します。
+                      ->orWhere('last_name', 'like', '%' . $keyword . '%')
+                      ->orWhere('email', 'like', '%' . $keyword . '%');
             });
         }
     }
