@@ -78,12 +78,12 @@
         </div>
         <div class="form__error">
           @if ($errors->has('areaNumber') || $errors->has('localNumber') || $errors->has('subscNumber'))
-              @if ($errors->first('areaNumber') == '電話番号を5桁以内で入力してください' ||
-                   $errors->first('localNumber') == '電話番号を5桁以内で入力してください' ||
-                   $errors->first('subscNumber') == '電話番号を5桁以内で入力してください')
-                  電話番号を5桁以内で入力してください。
+              @if ($errors->first('areaNumber') == '電話番号は5桁までの数字で入力してください' ||
+                $errors->first('localNumber') == '電話番号は5桁までの数字で入力してください' ||
+                $errors->first('subscNumber') == '電話番号は5桁までの数字で入力してください')
+                電話番号は5桁までの数字で入力してください
               @else
-                  電話番号を正しく入力してください。
+                電話番号を入力してください
               @endif
           @endif
         </div>

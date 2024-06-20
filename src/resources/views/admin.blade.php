@@ -35,9 +35,9 @@
       <h2>Admin</h2>
     </div>
     <div class="admin__inner">
-      <form class="admin__form" action="/">
-        <input type="text" placeholder="名前やメールアドレスを入力してください">
-        <select name="" id="">
+      <form class="admin__form" action="/search">
+        <input name="keyword" type="text" placeholder="名前やメールアドレスを入力してください">
+        <select name="gender" id="">
           <option value="">性別</option>
           <option value="1">男性</option>
           <option value="2">女性</option>
@@ -45,13 +45,11 @@
         </select>
         <select name="category_id" id="">
           <option value="">お問い合わせの種類</option>
-          <option value="1">商品のお届けについて</option>
-          <option value="2">商品の交換について</option>
-          <option value="3">商品トラブル</option>
-          <option value="4">ショップへのお問い合わせ</option>
-          <option value="5">その他</option>
+          @foreach ($categories as $category)
+            <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
+          @endforeach
         </select>
-        <input type="date">
+        <input name="date" type="date">
         <button>検索</button>
         <a href="./admin">リセット</a>
       </form>
@@ -156,7 +154,6 @@
               <button class="modal__button" type="submit">削除</button>
               </form>
             </div>
-          
         </div>
         </div>
         @endforeach

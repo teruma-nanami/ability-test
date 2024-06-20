@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Models\Category;
 
 class AuthController extends Controller
 {
   public function index() {
     $contacts = Contact::all();
     $contacts = Contact::Paginate(7);
+    $categories = Category::all();
     foreach ($contacts as $contact) {
       $genderValue = $contact->gender;
       $genderText = '';
@@ -48,6 +50,6 @@ class AuthController extends Controller
       $contact->categoryText =$categoryText;
     }
 
-    return view('admin', compact('contacts'));
+    return view('admin', compact('contacts', 'categories'));
   }
 }
