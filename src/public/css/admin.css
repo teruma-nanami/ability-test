@@ -1,0 +1,277 @@
+@charset "UTF-8";
+.admin__heading {
+  text-align: center;
+}
+.admin__heading h2 {
+  margin: 0;
+  padding: 60px 55px;
+  font-weight: 400;
+  font-size: 35px;
+  font-family: "Inika";
+  color: #8b7969;
+}
+.admin__inner {
+  max-width: 1183px;
+  margin: 0 auto;
+}
+.admin__inner table {
+  width: 100%;
+  padding: 0 0 0 55px;
+}
+.admin__inner tr:not(:first-child) {
+  border: 1px solid #E0DFDE;
+}
+.admin__inner th {
+  text-align: left;
+  color: #fff;
+  background-color: #8b7969;
+  padding: 10px 0;
+  font-size: 20px;
+}
+.admin__inner td {
+  text-align: left;
+  color: #8b7969;
+  padding: 10px 0;
+  font-size: 18px;
+}
+.admin__inner td button {
+  border: 1px solid #D9C6B5;
+  color: #D9C6B5;
+  background-color: #f4f4f4;
+  padding: 8px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.admin__inner th:nth-child(1),
+.admin__inner td:nth-child(1) {
+  padding: 0 0 0 55px;
+}
+.admin__inner th:nth-child(2),
+.admin__inner td:nth-child(2) {
+  padding: 0 55px 0 0;
+}
+.admin__form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.admin__form input {
+  display: block;
+  margin-right: 30px;
+}
+.admin__form input[type=text] {
+  width: 25%;
+  padding-left: 20px;
+  color: #8B7969;
+  border: 1px solid #E3DED9;
+  background-color: #fbfbfb;
+}
+.admin__form input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: relative;
+  right: -10px;
+  /* WebKitベースのブラウザでアイコンを非表示にする */
+}
+.admin__form input[type=date]::-webkit-inner-spin-button,
+.admin__form input[type=date]::-webkit-clear-button {
+  display: none; /* WebKitベースのブラウザで余分なUIを非表示にする */
+}
+.admin__form input[type=date] {
+  -moz-appearance: textfield; /* Firefoxでカレンダーアイコンを非表示にする */
+}
+.admin__form input[type=date] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border: 1px solid #E3DED9;
+  color: #8B7969;
+  background-color: #f4f4f4;
+  background-image: url("/img/icon2.png");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 17px 20px;
+  padding: 10px 20px 10px 10px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #8B7969;
+}
+.admin__form select {
+  font-size: 17px;
+  font-weight: 400;
+  margin-right: 30px;
+  padding: 10px 20px 10px 20px;
+  border-radius: none;
+  border: 1px solid #E3DED9;
+  color: #8B7969;
+  background-color: #f4f4f4;
+  color: #beb1a6;
+  background-color: #f4f4f4;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none; /* デフォルトの矢印を無効 */
+  background-image: url("/img/icon2.png");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 17px 20px;
+}
+.admin__form button {
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #8b7969;
+  background-color: #82756a;
+  padding: 12px 30px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.admin__form button:hover {
+  opacity: 0.75;
+}
+.admin__form a {
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #D9C6B5;
+  background-color: #D9C6B5;
+  text-decoration: none;
+  padding: 12px 14px;
+}
+.admin__form a:hover {
+  opacity: 0.75;
+}
+.admin__export {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 20px;
+}
+.admin__export button {
+  background-color: #e1dbd6;
+  color: #8b7969;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 90px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 805px;
+  height: 858px;
+  margin: 0 auto;
+  border: 1px solid #8B7969;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  animation-name: show;
+  animation-duration: 0.5s;
+  z-index: 99999;
+  background-color: #fff;
+}
+.modal__inner {
+  margin: 143px 30px 0 99px;
+  z-index: 99999;
+}
+.modal__close {
+  float: right;
+  border: 1px solid #8B7969;
+  color: #8B7969;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 30px;
+  margin: 30px 40px;
+}
+.modal__close:hover, .modal__close:focus {
+  color: #fff;
+  background-color: #8B7969;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.modal__content {
+  display: flex;
+  margin-top: 35px;
+}
+.modal__title {
+  width: 30%;
+  color: #8b7969;
+  font-weight: 700;
+  font-size: 20px;
+}
+.modal__text {
+  text-align: left;
+  color: #8b7969;
+  font-weight: 400;
+  font-size: 20px;
+  width: 70%;
+}
+.modal__form {
+  text-align: center;
+  margin-top: 114px;
+}
+.modal__button {
+  -webkit-appearance: unset;
+     -moz-appearance: unset;
+          appearance: unset;
+  background-color: #ba370d;
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+@keyframes show {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+.flex-1,
+div > p.leading-5 {
+  display: none;
+}
+
+svg.w-5.h-5 {
+  /*paginateメソッドの矢印の大きさ調整のために追加*/
+  width: 18px;
+  height: 18px;
+}
+
+.z-0 {
+  border-radius: 5px;
+  padding: 8px 0;
+  overflow: hidden;
+}
+.z-0 > a {
+  padding: 8px 12px;
+  color: #8b7969;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Inika";
+  border: 1px solid #e0DFDE;
+}
+.z-0 > span .px-2 {
+  padding: 7px 2px 5px 12px;
+  color: #8b7969;
+  text-decoration: none;
+  font-size: 18px;
+  border: 1px solid #e0DFDE;
+}
+.z-0 > span .px-4 {
+  padding: 8px 12px;
+  color: #fff;
+  background-color: #8b7969;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Inika";
+  border: 1px solid #e0DFDE;
+}/*# sourceMappingURL=admin.css.map */
