@@ -23,4 +23,5 @@ Route::get('/search', [ContactController::class, 'search']);
 
 Route::middleware('auth')->group(function () {
   Route::get('/admin', [AuthController::class, 'index']);
+  // 無意味なコメント
 });
